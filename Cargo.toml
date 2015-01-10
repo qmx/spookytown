@@ -1,0 +1,5 @@
+[package]
+
+name = "spookytown"
+version = "0.0.1"
+authors = ["Douglas Campos <qmx@qmx.me>"]
