@@ -3,7 +3,6 @@ extern crate handlebars;
 extern crate "rustc-serialize" as serialize;
 
 use std::io::File;
-use std::os::getenv;
 use std::collections::BTreeMap;
 use serialize::json::{Json, ToJson};
 use handlebars::{Handlebars};
@@ -26,8 +25,4 @@ fn main() {
     t.insert("name".to_string(), "whoa2".to_json());
 
     println!("{}", handlebars.render("hello", &t).unwrap());
-    match getenv("DATABASE_URL") {
-        Some(val) => println!("{}", val),
-        None => println!("not defined")
-    }
 }
