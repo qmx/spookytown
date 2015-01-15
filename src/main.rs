@@ -1,11 +1,14 @@
 #![allow(unstable)]
 extern crate handlebars;
+extern crate rustdoc;
 extern crate "rustc-serialize" as serialize;
 
 use std::io::File;
 use std::collections::BTreeMap;
 use serialize::json::{Json, ToJson};
 use handlebars::{Handlebars};
+use rustdoc::html::markdown::Markdown;
+
 fn main() {
     let mut handlebars = Handlebars::new();
     let path = Path::new("template.hbs");
@@ -25,4 +28,5 @@ fn main() {
     t.insert("name".to_string(), "whoa2".to_json());
 
     println!("{}", handlebars.render("hello", &t).unwrap());
+    println!("{}", Markdown("I **hate** EJBs"));
 }
