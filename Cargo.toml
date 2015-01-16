@@ -9,3 +9,6 @@ authors = ["Douglas Campos <qmx@qmx.me>"]
 [dependencies.handlebars]
 git = "https://github.com/sunng87/handlebars-rust"
 
+[dependencies.toml]
+git = "https://github.com/alexcrichton/toml-rs"
+
